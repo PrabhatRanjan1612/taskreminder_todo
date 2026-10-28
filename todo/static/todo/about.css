@@ -1,0 +1,35 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.content{
+    margin-left: 15rem;
+    width: 70vw;
+    height: 100vh;
+    padding: 20px;
+}
+h1{
+    text-align: center;
+}
+span{
+    color: rgb(55, 55, 205);
+    display: block;
+    padding: 5px;
+    margin-left: 25rem;
+}
+
+ol {
+    color: rgb(6, 6, 159);
+    font-size: 20px;
+}
+li{
+    margin: 10px;
+}
+
+
+
+p{
+    color: black;
+    font-size: 15px;
+}

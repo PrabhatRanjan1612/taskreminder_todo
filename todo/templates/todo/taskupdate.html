@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskUpdate</title>
+    <link rel="icon" href="{% static "todo/logo.png" %}">
+    <link rel="stylesheet" href=" {% static "todo/taskupdate.css" %} ">
+</head>
+<body>
+    <div class="logo">
+        <img src="{% static "todo/logo.png" %}" alt="logo">
+    </div>
+    <div class="contant">
+        {% include "todo/includes/nav.html" %}
+        <div class="cont_body">
+            <h2>Task Reminder Web-Applications</h2>
+            <h3>Update Task</h3>
+            <div class="addtask">
+                <form action=" {% url "updateTask" task.id %} " method="POST">
+                    {% csrf_token %}
+                    <label for="title">Title:</label>
+                    <input type="text" name="title" id="title" required maxlength="150" value="{{ task.title }}">
+                    <label for="description">Description:</label>
+                    <textarea name="descri" id="description">{{ task.description }}</textarea>
+                    <label for="date">Due_date:</label>
+                    <input type="date" name="date" id="date" required >
+                    <button type="submit">Update</button>
+                </form>
+                {% if msg %}
+                    <div class="msg">
+                        {{msg}}
+                    </div> 
+                {% endif %}
+                
+            </div>
+
+        </div>
+    </div>
+    {% if msg %}
+        <script>
+            alert(" {{msg}} ")
+        </script>
+    {% endif %}
+</body>
+</html>

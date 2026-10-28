@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-Details</title>
+    <link rel="icon" href=" {% static "todo/logo.png" %} ">
+    <link rel="stylesheet" href=" {% static "todo/taskDetails.css" %} ">
+</head>
+<body>
+    <div class="content_outer">
+        {% include "todo/includes/nav.html" %}
+        <div class="content_inner">
+            <h1><span>Title :</span> {{task.title}} </h1>
+            <p><span>Description :</span> {{task.description}} </p>
+            <p><span>Due-date :</span> {{task.due_date}}</p>
+            <p><span>completed :</span> {{task.completed}}</p>
+            
+            <a href=" {% url "alltask" %} " id="back_btn"> Back </a>
+        </div>
+        
+    </div>
+</body>
+</html> 

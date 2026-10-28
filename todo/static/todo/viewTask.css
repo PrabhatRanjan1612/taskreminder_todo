@@ -1,0 +1,114 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.main_contant{
+    background-image: url("alltaskbg.jpg");
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 20px;
+    display: flex;
+    justify-content: right;
+}
+.Tasklayout{
+    position: absolute;
+    top: 4.5em;
+    width: 60vw;
+    height: 88vh;
+    border-radius: 20px;
+    background-color: rgb(0,0,0,0.5);
+    box-shadow: -5px 4px 10px black;
+    overflow: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+#titel{
+    width: 5em;
+    height: 5rem;
+    font-size: 60px;
+    font-style: oblique;
+    color: aliceblue;
+    margin: 10px;
+    text-decoration:underline;
+    text-shadow: 2px 2px 0 #000, 
+               4px 4px 0 #444, 
+               6px 6px 0 #888;
+}
+.taskscon{
+    height: 72vh;
+    width: 59vw;
+    padding: 5px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+
+/* task_con */
+.taskcon{
+    width: 58.2vw;
+    height: 10vh;
+    background-color:black;
+    padding: 5px;
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    border: 1px white solid;
+}
+.taskcon:hover{
+    box-shadow: 0px 0px 15px white;
+    border: 2px lightgreen solid;
+}
+.taskcon a{
+    text-decoration: none;
+    color: white;
+    margin-right: 15px;
+    font-size: 30px;
+}
+.taskcon a i{
+    font-size: 30px;
+}
+.fa-circle-check:hover{
+    color: green;
+    box-shadow: 0px 0px 10px white;
+    border-radius: 50%;
+}
+.fa-trash:hover{
+    color: red;
+    text-shadow: 0px 0px 10px white;
+}
+.fa-file-pen:hover{
+    color: rgba(198, 198, 22, 0.989);
+    text-shadow: 0px 0px 10px white;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .main_contant{
+        display: flex;
+        justify-content: center;
+    }
+    .taskcon a{
+    font-size: 25px;
+    }
+    .taskcon a i{
+    font-size: 25px;
+    }
+}   
+
+@media (max-width: 767px) {
+  .main_contant{
+        display: flex;
+        justify-content: center;
+    }
+    .taskcon a{
+    font-size: 25px;
+    }
+    .taskcon a i{
+    font-size: 25px;
+    }
+}

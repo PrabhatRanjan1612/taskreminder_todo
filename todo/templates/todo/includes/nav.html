@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=" {% static "todo/includes/nav.css" %} ">
+</head>
+<body>
+    <div class="nav">
+        <a href=" {% url "homepage" %} ">Home</a>
+        <a href=" {% url "alltask" %} ">Task</a>
+        <a href=" {% url "addtask" %} ">Newtask</a>
+        <a href=" {% url "aboutApp" %} ">About</a>
+        <a href=" {% url "logout" %} " id="lock">Logout</a>
+    </div>
+</body>
+</html>
